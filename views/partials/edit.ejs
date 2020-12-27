@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div class="modal" id="modalEdit" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content   <form role="form"  method="post" >-->
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="padding:35px 50px; color: darksalmon"
+          >
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4>
+              <span class="glyphicon glyphicon-refresh"></span> :עדכון משתמש
+            </h4>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <div class="form-group">
+              <label style="text-align: center"> :שם משתמש</label>
+              <input
+                type="text"
+                class="form-control"
+                id="usrname_ed"
+                value=""
+                placeholder="הכנס שם משתמש"
+              />
+            </div>
+            <div class="form-group">
+              <label
+                ><span class="glyphicon glyphicon-eye-open"></span>
+                :סיסמא</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="psw_ed"
+                value=""
+                placeholder="הכנס סיסמא"
+              />
+            </div>
+
+            <div class="form-group">
+              <label> :מין</label><br />
+              <select id="gender_ed">
+                <option>M</option>
+                <option>F</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label> :ת.ז</label>
+              <input
+                type="text"
+                class="form-control"
+                id="numId_ed"
+                value=""
+                placeholder="הכנס מספר ת.ז"
+              />
+            </div>
+            <div class="form-group">
+              <label>:כתובת</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address_ed"
+                value=""
+                placeholder="הכנס כתובת"
+              />
+            </div>
+
+            <div class="form-group">
+              <label> :קטגוריה</label><br />
+              <select id="role_ed">
+                <option>user</option>
+                <option>supplier</option>
+                <option>employee</option>
+                <option>manage</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>:מספר סניף</label>
+              <input
+                type="text"
+                class="form-control"
+                id="idB_ed"
+                value="0"
+                placeholder="מנהל/עובד, הכנס מספר סניף"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-success"
+              onclick="edit( psw_ed.value, gender_ed.value, numId_ed.value, usrname_ed.value, address_ed.value, role_ed.value, idB_ed.value)"
+            >
+              <span class="glyphicon glyphicon-ok"></span> עדכן
+            </button>
+            <button
+              type="submit"
+              class="btn btn-danger btn-default"
+              data-dismiss="modal"
+            >
+              <span class="glyphicon glyphicon-remove"></span> ביטול
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function() {
+      $("#myBtn").click(function() {
+        $("#modalEdit").modal();
+      });
+    });
+
+    function getData(myId) {
+      $.get("getData", {
+        userName: myId
+      })
+        .done(function(data) {
+          $("[id*=usrname_ed]").val(data.userName);
+          $("[id*=psw_ed]").val(data.pass);
+          $("[id*=gender_ed]").val(data.gender);
+          $("[id*=numId_ed]").val(data.id);
+          $("[id*=address_ed]").val(data.address);
+          $("[id*=role_ed]").val(data.category);
+        })
+        .fail(function() {
+          alert("error");
+        });
+    }
+  </script>
+</html>

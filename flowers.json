@@ -1,0 +1,8 @@
+[
+  { "name": "Iris", "color": "yellow", "imag": "iris.jpg", "price": "3.5" },
+  { "name": "Rose", "color": "red", "imag": "Rose.jpg", "price": "5" },
+  { "name": "Sunflower", "color": "yellow", "imag": "sunflower.jpg", "price": "4" },
+  { "name": "Gerbers", "color": "orange", "imag": "gerbers.jpg", "price": "4.5" },
+  { "name": "Calanit", "color": "red", "imag": "kalanit.jpg", "price": "2.5" },
+  { "name": "Aster ageratoides", "color": "white", "imag": "Aster_ageratoides.jpg", "price": "3" }
+]

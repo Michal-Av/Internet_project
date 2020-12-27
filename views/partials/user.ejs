@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <tr>
+      <td><%=user.id%></td>
+      <td><%=user.userName%></td>
+      <td><%=user.pass%></td>
+      <td><%=user.gender%></td>
+      <td><%=user.address%></td>
+	  <td><%=user.category%></td>
+	  <td> 		  
+	  
+		<button id=<%=user.userName%> class="btn" type="submit" data-target="#modalEdit" data-toggle="modal" onclick="getData(this.id)">  
+       <span class="glyphicon glyphicon-edit"></span> </button>
+		<button id=<%=user.userName%> type="submit" class="btn btn-danger" onclick="del(this.id)">
+                <span class="glyphicon glyphicon-minus"></span> 
+              </button>			  
+			  
+			  
+			  </td>
+    </tr>
+  </body>
+</html>

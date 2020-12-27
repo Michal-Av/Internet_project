@@ -1,0 +1,6 @@
+[{"id":"111" , "address": "Modiin" ,"active":"true" },
+				 {"id":"222" , "address": "Zefat" ,"active":"false" },
+				 {"id":"333" , "address":"Jerusalem" ,"active":"false" },
+				 {"id":"444" , "address": "Ashdod" ,"active":"true" },
+				 {"id":"555" , "address":"Sderot" ,"active":"false" }
+				 ]

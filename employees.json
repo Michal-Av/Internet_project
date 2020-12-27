@@ -1,0 +1,7 @@
+[ { "userName": "Or", "pass":"shaul", "gender":"M", "id":  "325684", "address": "Jerusalem","idB":"333", "manage":"true" },
+                 { "userName": "Adi", "pass":"Levi", "gender":"F", "id":  "325611", "address":"Eilat", "idB":"555" , "manage":"true" },
+                 { "userName": "Moshe", "pass":"Cohen", "gender":"M", "id":  "322684", "address":"Jerusalem", "idB":"333" , "manage":"true"},
+                 { "userName": "Shai", "pass":"Edri", "gender":"M", "id":  "315684", "address":"Talmon", "idB":"111", "manage":"false" },
+                 { "userName": "Tahel", "pass":"Revivo", "gender":"F", "id":  "325284", "address":"Modiin", "idB":"444", "manage":"false" },
+                 { "userName": "Eliya", "pass":"shaul", "gender":"M", "id":  "325644", "address":"Zefat", "idB":"222", "manage":"true" }
+               ]

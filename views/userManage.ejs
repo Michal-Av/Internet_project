@@ -1,0 +1,155 @@
+<body>
+  <% include partials/edit %>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-2 sidenav"></div>
+      <div class="col-sm-8 text-right">
+        <h1>ניהול משתמשים</h1>
+
+        <div class="container text-left">
+          <table class="table table-striped" style="border-spacing: 30px 0;">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>userName</th>
+                <th style="padding: 10px 0;">password</th>
+                <th style="padding: 10px 0;">gender</th>
+                <th style="padding: 10px 0;">address</th>
+                <th style="padding: 10px 0;">category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% users.forEach(function(user) { %> <% include partials/user %>
+              <% }); %>
+            </tbody>
+            <div >
+            <button
+              type="submit"
+              class="btn"
+              data-target="#modalAdd" data-toggle="modal"
+              ><span class="glyphicon glyphicon-plus"></span>
+            </a>
+            </button>
+
+            <button
+              type="submit"
+              class="btn"
+              style="padding-left:10px"
+              onclick="load()"
+            >
+              <span class="glyphicon glyphicon-repeat"></span>
+            </button>
+            </div>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modalAdd" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content   <form role="form"  method="post" >-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4><span class="glyphicon glyphicon-plus"></span> :הוספת משתמש</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <div class="form-group">
+            <label style="text-align: center"> :שם משתמש</label>
+            <input
+              type="text"
+              class="form-control"
+              id="usrname_add"
+              value=""
+              placeholder="הכנס שם משתמש"
+            />
+          </div>
+          <div class="form-group">
+            <label
+              ><span class="glyphicon glyphicon-eye-open"></span> :סיסמא</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="psw_add"
+              value=""
+              placeholder="הכנס סיסמא"
+            />
+          </div>
+
+          <div class="form-group">
+            <label> :מין</label><br />
+            <select id="gender_add">
+              <option>M</option>
+              <option>F</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label> :ת.ז</label>
+            <input
+              type="text"
+              class="form-control"
+              id="numId_add"
+              value=""
+              placeholder="הכנס מספר ת.ז"
+            />
+          </div>
+          <div class="form-group">
+            <label>:כתובת</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address_add"
+              value=""
+              placeholder="הכנס כתובת"
+            />
+          </div>
+
+          <div class="form-group">
+            <label> :קטגוריה</label><br />
+            <select id="role_add">
+              <option>user</option>
+              <option>supplier</option>
+              <option>employee</option>
+              <option>manage</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>:מספר סניף</label>
+            <input
+              type="text"
+              class="form-control"
+              id="idB_add"
+              value="0"
+              placeholder="מנהל/עובד, הכנס מספר סניף"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-success"
+            onclick="addU( psw_add.value, gender_add.value, numId_add.value, usrname_add.value, address_add.value, role_add.value, idB_add.value)"
+          >
+            <span class="glyphicon glyphicon-plus"></span> הוסף
+          </button>
+          <button
+            type="submit"
+            class="btn btn-danger btn-default"
+            data-dismiss="modal"
+          >
+            <span class="glyphicon glyphicon-remove"></span> ביטול
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  $(document).ready(function() {
+    $("#myBtn").click(function() {
+      $("#modalAdd").modal();
+    });
+  });
+</script>

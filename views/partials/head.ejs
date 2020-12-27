@@ -1,0 +1,176 @@
+<head>
+  <title>ברניקה פרחים</title>
+  <meta
+    http-equiv="refresh"
+    content="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_cards"
+  />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- views/partials/head.ejs -->
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  />
+  <script src="function.js" ;></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="/images/favicon.png" />
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      max-width: 100%;
+    }
+
+    li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 450px;
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      /* // padding-top: 20px; */
+      background-image: url("images/background.jpg");
+      /* background-color: #f1f1f1; */
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #a6a6a6;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .row.content {
+        height: auto;
+      }
+
+      .card {
+        margin: 5; /* Added */
+        float: 4; /* Added */
+        margin-bottom: 5px; /* Added */
+        height: 202px;
+        width: 172px;
+        border: 1px solid #000000;
+        text-align: center;
+        text-emphasis-position: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0.2, 0.4);
+        transform: translate(-50%, -50%);
+        transform-style: preserve-3d;
+        transition: 0.2s;
+      }
+    }
+
+    @import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
+    * {
+      box-sizing: border-box;
+    }
+    .contain {
+      font-family: "Josefin Sans", sans-serif;
+      background-color: #eee;
+    }
+    .contain.a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .card {
+      margin: 5; /* Added */
+      float: 4; /* Added */
+      margin-bottom: 5px; /* Added */
+      height: 202px;
+      width: 172px;
+      border: 1px solid #000000;
+      text-align: center;
+      text-emphasis-position: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0.2, 0.4);
+      transform: translate(-50%, -50%);
+      transform-style: preserve-3d;
+      transition: 0.2s;
+    }
+    .card:hover .card-front {
+      transform: rotateX(-180deg);
+    }
+    .card:hover .card-back {
+      transform: rotateX(0deg);
+    }
+
+    .card-front {
+      height: 100%;
+      width: 100%;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-color: #ffe6e6;
+      backface-visibility: hidden;
+      transform: rotateX(0deg);
+      transition: 0.5s;
+    }
+    .card-back {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #ffe6e6;
+      backface-visibility: hidden;
+      transform: rotateX(180deg);
+      transition: 0.5s;
+      color: #000000;
+    }
+
+    .card-back.h3 {
+      margin: 60% auto 35% auto;
+      font-size: 26px;
+    }
+
+    .card-back:hover {
+      color: #000000;
+      background-color: #ffe6e6;
+    }
+    /* 
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    } */
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
